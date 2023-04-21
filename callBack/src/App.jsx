@@ -1,11 +1,16 @@
 import { useState } from "react";
 import "./App.css";
 import ParentComponent from "./component/ParentComponent";
+import Counter from "./component/Counter";
+import FocusInput from "./component/FocusInput";
 
 function App() {
   return (
     <div>
-      <ParentComponent />
+      <FocusInput />
+      {/*
+    <Counter />
+    <ParentComponent />*/}
     </div>
   );
 }
