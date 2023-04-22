@@ -1,13 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 function Form() {
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
+
+  const reffer1 = useRef("");
+
+  useEffect(() => {
+    reffer1.current.focus();
+  }, []);
+
   return (
     <div>
       <div>
         <label>First Name</label>
-        <input value={fname} onChange={(e) => setFname(e.target.value)}></input>
+        <input
+          ref={reffer1}
+          value={fname}
+          onChange={(e) => setFname(e.target.value)}></input>
         First Name : {fname}
       </div>
       <div>
